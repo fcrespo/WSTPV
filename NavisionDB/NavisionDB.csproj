@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9252727E-2BFD-46A0-B617-715F42F48175}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>NavisionDB</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/NavisionDB/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Navision.CFront.CFrontDotNet, Version=1.0.2455.260, Culture=neutral, PublicKeyToken=412fa6df75913294">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Microsoft.Navision.CFront.CFrontDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Messaging">
+      <Name>System.Messaging</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavisionDB\CFrontDll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavisionDB\CFrontRecordset.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavisionDB\GeneradorIDMsg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavisionDB\NavisionDBAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NavisionDB\NavisionDBCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavisionDB\NavisionDBConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavisionDB\NavisionDBConnection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NavisionDB\NavisionDBDataReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavisionDB\NavisionDBNas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavisionDB\NavisionDBNumSerie.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavisionDB\NavisionDBRelation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavisionDB\NavisionDBTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavisionDB\NavisionDBUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavisionDB\OptionFieldData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavisionDB\TableFilters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavisionDB\TableKey.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="NavisionDB.NavisionDBAdapter.resources" />
+    <EmbeddedResource Include="NavisionDB.NavisionDBConnection.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
